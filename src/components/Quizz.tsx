@@ -1,13 +1,10 @@
 import { QA } from "../interfaces/types";
+import { QuizzProps } from "../interfaces/props";
 import AnswerComponent from "./Answer";
 import GenerateQA from "../utils/GenerateQA";
 import "./Quizz.scss";
 import { useState, useEffect } from "react";
-interface QuizzProps {
-	updateScore: () => void;
-	resetScore: () => void;
-	currentScore: number;
-  }
+
   
   export default function QuizzComponent(props: QuizzProps) {
 
