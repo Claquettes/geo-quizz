@@ -2,7 +2,7 @@ import HeaderComponent from "./components/Header";
 import QuizzComponent from "./components/Quizz";
 import TimerScore from "./components/TimerAndScore";
 import EndScreen from "./components/EndScreen";
-import toast, { Toaster } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 import { useEffect, useState } from "react";
 import { createToast } from "./utils/CreateToast";
 
