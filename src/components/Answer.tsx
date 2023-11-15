@@ -5,7 +5,7 @@ export default function AnswerComponent(props: Readonly<AnswerProps>) {
     const { answer,select, index } = props;
     return (
         <div className="answerComponent" onClick={() => select(index)}>
-            {answer}
+            <h2>{answer}</h2>
         </div>
     );
 }

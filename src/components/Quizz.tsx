@@ -3,8 +3,13 @@ import AnswerComponent from "./Answer";
 import GenerateQA from "../utils/GenerateQA";
 import "./Quizz.scss";
 import { useState, useEffect } from "react";
-
-export default function QuizzComponent() {
+interface QuizzProps {
+	updateScore: () => void;
+	resetScore: () => void;
+	currentScore: number;
+  }
+  
+  export default function QuizzComponent(props: QuizzProps) {
 
 	const [round, setRound] = useState<QA>(GenerateQA());
 	const [encodedImage, setEncodedImage] = useState<string>("");
@@ -12,13 +17,16 @@ export default function QuizzComponent() {
 	function handleSelection(index: number) {
 		if (index === round.answers.correctIndex) {
 			alert("Correct!");
+			props.updateScore();
 		}
 		else {
 			alert("Wrong!");
+			props.resetScore();
 		}
 		setTimeout(() => {setRound(GenerateQA)}, 200);
 	}
 
+	//to change the name of the image, so the user cannot see the name of the country by inspecting the page
 	useEffect(() => {
 		// Load the SVG image using an XMLHttpRequest
 		const xhr = new XMLHttpRequest();
