@@ -257,5 +257,5 @@ export default function GenerateRandomFlag(): string{
         "zw"
     ];
     const randomIndex = Math.floor(Math.random() * listOfFlags.length);
-    return listOfFlags[randomIndex] + ".svg";
+    return listOfFlags[randomIndex];
 }

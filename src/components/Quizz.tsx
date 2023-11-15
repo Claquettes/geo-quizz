@@ -20,6 +20,7 @@ export default function QuizzComponent() {
 				<AnswerComponent answer={Round.answers.answer2} select={() => handleSelection(2)} index={2} />
 				<AnswerComponent answer={Round.answers.answer3} select={() => handleSelection(3)} index={3} />
 			</div>
+			<p>{Round.answers.correctIndex}</p>
 		</div>
 	);
 }
