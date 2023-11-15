@@ -10,11 +10,19 @@
     margin: 0 auto;
     border-radius: 35px;
     padding: 1rem;
+    @media (max-width: 768px) {
+        width: 90%;
+        border-radius: 5px;
+        
+    }
 }
 
 #endscreen h3{
     font-size: 4rem;
     font-weight: 900;
+    @media (max-width: 768px) {
+        font-size: 2rem;
+    }
 }
 
 #endscreen button{
