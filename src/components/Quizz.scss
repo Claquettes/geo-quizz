@@ -1,0 +1,46 @@
+@import "../assets/catppuccin.scss";
+
+
+#quizz-wrapper {
+    background-color: $mocha-surface0;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 35px;
+    padding: 1rem;
+    padding-top: 2rem;
+}
+
+#quizz-wrapper img {
+    height: 300px;
+    border-radius: 35px;
+}
+
+#answer-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.answerComponent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 100px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+@media (max-width: 768px) {
+    .AnswerComponent {
+        width: 80%;
+    }
+}

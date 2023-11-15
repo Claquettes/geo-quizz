@@ -1,5 +1,5 @@
-import HeaderComponent from "./assets/components/Header";
-import QuizzComponent from "./assets/components/Quizz";
+import HeaderComponent from "./components/Header";
+import QuizzComponent from "./components/Quizz";
 
 import "./App.scss";
 
