@@ -9,15 +9,25 @@
 #header h1{
   margin-top: -1rem;
   font-size: 4rem;
+  max-width: 768px;
+
+  @media (max-width: 768px) {
+    font-size: 1.7rem;
+  }
 }
 
 #header h3{
   margin-top: -3rem;
   font-size: 1rem;
+  max-width: 768px;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 #endscreen{
   font-size: 150%;
+  max-width: 768px;
 }
 
 #timer{
@@ -30,4 +40,10 @@
   //we add a border radius, but only on the top right and top  left corners
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
+  
+  @media (max-width: 768px) {
+    max-width: 768px;
+    font-size: 0.6rem;
+    border-radius: 35px;
+  }
 }
