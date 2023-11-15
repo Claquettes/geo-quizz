@@ -16,11 +16,9 @@ interface QuizzProps {
 
 	function handleSelection(index: number) {
 		if (index === round.answers.correctIndex) {
-			alert("Correct!");
 			props.updateScore();
 		}
 		else {
-			alert("Wrong!");
 			props.resetScore();
 		}
 		setTimeout(() => {setRound(GenerateQA)}, 200);

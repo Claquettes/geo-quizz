@@ -5,15 +5,19 @@ import GetCorrespondanceIdToName from "./GetCorrespondanceIdToName";
 export default function GenerateQA(): QA {
 
 	const flagName = GenerateRandomFlag();
-	const wrongFlagName1 = GenerateRandomFlag();
-	const wrongFlagName2 = GenerateRandomFlag();
-	const wrongFlagName3 = GenerateRandomFlag();
+	const wrongFlagNames = new Set<string>();
+
+	// Generate three unique wrong flag names
+	while (wrongFlagNames.size < 3) {
+		const name = GenerateRandomFlag();
+		if (name !== flagName) {
+			wrongFlagNames.add(name);
+		}
+	}
 
 	const answersString: string[] = [
 		GetCorrespondanceIdToName(flagName),
-		GetCorrespondanceIdToName(wrongFlagName1),
-		GetCorrespondanceIdToName(wrongFlagName2),	
-		GetCorrespondanceIdToName(wrongFlagName3)
+		...Array.from(wrongFlagNames).map(GetCorrespondanceIdToName)
 	];
 
 	// Shuffle the answers randomly
