@@ -8,7 +8,9 @@ export default function QuizzComponent() {
 	const Round: QA = GenerateQA();
 
 	function handleSelection(index: number) {
-		console.log(index);
+		if (index === Round.answers.correctIndex) {
+			alert("Correct!");
+		}
 	}
 
 	return (
