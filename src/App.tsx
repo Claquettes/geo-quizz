@@ -12,7 +12,7 @@ function App() {
 	const [score, setScore] = useState<number>(0);
 	const [bestScore, setBestScore] = useState<number>(0);
 	const [isGameOver, setIsGameOver] = useState<boolean>(false);
-	const [timeRemaining, setTimeRemaining] = useState<number>(10000);
+	const [timeRemaining, setTimeRemaining] = useState<number>(10);
 
 	function saveScore() {
 		setScore((prevScore) => {
