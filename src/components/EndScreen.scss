@@ -1,0 +1,33 @@
+@import '../assets/catppuccin.scss';
+
+#endscreen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $mocha-surface0;
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 35px;
+    padding: 1rem;
+}
+
+#endscreen h3{
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+#endscreen button{
+    background-color: $mocha-surface1;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}

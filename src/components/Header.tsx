@@ -1,7 +1,8 @@
 export default function HeaderComponent() {
 	return (
-	    <div>
-			<h1 id="header-h1">🌍Geo-Quizz🌎</h1>
+	    <div id="header">
+			<h1 >🌍Geo-Quizz🌎</h1>
+			<h3>10 seconds to identify the most flags!</h3>
 		</div>
 	);
 }

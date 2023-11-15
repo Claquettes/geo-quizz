@@ -1,7 +1,7 @@
 import HeaderComponent from "./components/Header";
 import QuizzComponent from "./components/Quizz";
 import TimerScore from "./components/TimerAndScore";
-import EndScreenModal from "./components/EndScreenModal";
+import EndScreen from "./components/EndScreen";
 import toast, { Toaster } from "react-hot-toast";
 import { useEffect, useState } from "react";
 import { createToast } from "./utils/CreateToast";
@@ -30,6 +30,13 @@ function App() {
 		createToast("error");
 	}
 
+	function restartGame() {
+		setIsGameOver(false);
+		setTimeRemaining(10);
+		setScore(0);
+		setBestScore(0);	
+	}
+
 	useEffect(() => {
 		const intervalId = setInterval(() => {
 			if (timeRemaining > 0) {
@@ -44,7 +51,7 @@ function App() {
 	return (
 		<>
 			{isGameOver === true ? (
-				<EndScreenModal endScore={bestScore} restart={() => setIsGameOver(false)} />
+				<EndScreen endScore={bestScore} restart={restartGame} />
 			) : (
 				<>
 					<Toaster />
